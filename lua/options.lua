@@ -2,7 +2,7 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
-if vim.fn.has('win32') then
+if vim.loop.os_uname().sysname == "Windows_NT" then
      HOME = os.getenv("UserProfile")
 else
      HOME = os.getenv("HOME")
