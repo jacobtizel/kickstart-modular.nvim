@@ -36,7 +36,7 @@ return {
 		{ "<leader>hl", function() require("harpoon"):list():select(4) end, desc = "Harpoon: Select file 4" },
 		{ "<leader>h;", function() require("harpoon"):list():select(5) end, desc = "Harpoon: Select file 5" },
 
-		{ "<C-S-P>", function() require("harpoon"):list():prev() end },
-		{ "<C-S-N>", function() require("harpoon"):list():next() end }
+		-- { "<C-S-P>", function() require("harpoon"):list():prev() end }, -- interferes with wezterm inputs
+		-- { "<C-S-N>", function() require("harpoon"):list():next() end }
 	}
 }
