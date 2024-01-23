@@ -4,5 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
 	"tpope/vim-speeddating",
-	"tpope/vim-repeat"
+	"tpope/vim-repeat",
+	{ "windwp/nvim-ts-autotag", opts = {} }
 }
