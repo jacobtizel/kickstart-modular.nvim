@@ -52,6 +52,9 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "delete to black hole 
 -- replace the word you are on throughout the file
 vim.keymap.set("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace current word throughout file" })
 
+-- open the current file in firefox
+vim.keymap.set("n", "<leader>ff", "<cmd>!firefox %<CR>", { desc = "Open the current file in Firefox" })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
