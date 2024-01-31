@@ -40,8 +40,30 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Shortcut for Ex mode
 vim.keymap.set('n', '<leader>E', vim.cmd.Ex, { desc = 'Open [E]x file explorer' })
 
--- Exit to normal mode in terminal with <Esc>
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+-- Terminal Mappings
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
+vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
+vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
+vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
+vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
+vim.keymap.set("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+vim.keymap.set("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
+
+-- Windows
+vim.keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window", remap = true })
+vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", remap = true })
+vim.keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below", remap = true })
+vim.keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right", remap = true })
+vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
+vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window right", remap = true })
+
+-- Tabs
+vim.keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
+vim.keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
+vim.keymap.set("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
+vim.keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+vim.keymap.set("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+vim.keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- Toggle line numbers
 vim.keymap.set('n', '<Leader>tn', ':set relativenumber!<cr>', { desc = "toggle relative line numbers" })
