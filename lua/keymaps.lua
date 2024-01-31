@@ -46,6 +46,27 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 -- Toggle line numbers
 vim.keymap.set('n', '<Leader>tn', ':set relativenumber!<cr>', { desc = "toggle relative line numbers" })
 
+-- Add undo break-points
+vim.keymap.set("i", ",", ",<c-g>u")
+vim.keymap.set("i", ".", ".<c-g>u")
+vim.keymap.set("i", ";", ";<c-g>u")
+
+-- Better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- Lazy
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- New file
+vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+
+-- Quickfix
+vim.keymap.set("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
+vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
+vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix" })
+vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
+
 -- when replacing, keeps current text in " register instead of replacing
 -- vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Keep text in \" register instead of replacing" })
 
