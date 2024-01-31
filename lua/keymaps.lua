@@ -50,7 +50,7 @@ vim.keymap.set("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 vim.keymap.set("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
 
 -- Windows
-vim.keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window", remap = true })
+vim.keymap.set("n", "<leader>ww", "<C-W>w", { desc = "Other window", remap = true })
 vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", remap = true })
 vim.keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below", remap = true })
 vim.keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right", remap = true })
@@ -116,5 +116,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+require('which-key').register {
+  ['<leader><tab>'] = { name = '[Tab]', _ = 'which_key_ignore' },
+  ['<leader>w'] = { name = '[W]indow', _ = 'which_key_ignore' },
+}
 
 -- vim: ts=2 sts=2 sw=2 et
