@@ -106,6 +106,10 @@ vim.keymap.set("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- open the current file in firefox
 vim.keymap.set("n", "<leader>ff", "<cmd>!firefox %<CR>", { desc = "Open the current file in Firefox" })
 
+-- set current file format to dos/unix (remove ^M characters)
+vim.keymap.set("n", "<leader>fd", "<cmd>set fileformats=dos<cr><cmd>e %<cr>", { desc = "set the file format to dos" })
+vim.keymap.set("n", "<leader>fu", "<cmd>set fileformats=unix<cr><cmd>e %<cr>", { desc = "set the file format to dos" })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
