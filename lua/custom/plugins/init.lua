@@ -5,5 +5,6 @@
 return {
 	"tpope/vim-speeddating",
 	"tpope/vim-repeat",
-	{ "windwp/nvim-ts-autotag", opts = {} }
+	"cohama/lexima.vim",
+	{ "windwp/nvim-ts-autotag", opts = {} },
 }
