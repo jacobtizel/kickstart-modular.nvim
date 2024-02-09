@@ -19,6 +19,9 @@ vim.keymap.set("v", "<A-K>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 -- Cursor stays in place when joining lines
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- digraph keymap replaced
+vim.keymap.set("i", "<C-j>", "<C-k>")
+
 -- Keeps lines in the middle of the page with half-page scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
