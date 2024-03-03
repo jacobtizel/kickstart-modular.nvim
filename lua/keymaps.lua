@@ -26,6 +26,9 @@ vim.keymap.set("i", "<C-j>", "<C-k>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Reindent the whole file
+vim.keymap.set("n", "<leader>=", "gg=Gg``", { desc = "Indent whole file" })
+
 -- Buffer swap
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
