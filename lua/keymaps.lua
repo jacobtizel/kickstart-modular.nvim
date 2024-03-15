@@ -136,9 +136,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
---require('which-key').register {
---['<leader><tab>'] = { name = '[Tab]', _ = 'which_key_ignore' },
---['<leader>w'] = { name = '[W]indow', _ = 'which_key_ignore' },
---}
-
 -- vim: ts=2 sts=2 sw=2 et
