@@ -14,8 +14,8 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   ---- Git related plugins
-  --'tpope/vim-fugitive',
-  --'tpope/vim-rhubarb',
+  'tpope/vim-fugitive',
+  'tpope/vim-rhubarb',
 
   -- {
   --   -- Set lualine as statusline
