@@ -6,6 +6,5 @@ return {
   'tpope/vim-speeddating',
   'tpope/vim-repeat',
   'cohama/lexima.vim',
-  'Glench/Vim-Jinja2-Syntax',
   { 'windwp/nvim-ts-autotag', opts = {} },
 }
