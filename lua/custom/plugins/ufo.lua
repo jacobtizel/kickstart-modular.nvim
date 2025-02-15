@@ -46,6 +46,16 @@ return {
       end,
       desc = '󱃄 Close L4 folds',
     },
+    {
+      'zp',
+      function()
+        local winid = require('ufo').peekFoldedLinesUnderCursor()
+        if not winid then
+          vim.lsp.buf.hover()
+        end
+      end,
+      desc = 'Peek Folded Line',
+    },
   },
   init = function()
     -- INFO fold commands usually change the foldlevel, which fixes folds, e.g.
