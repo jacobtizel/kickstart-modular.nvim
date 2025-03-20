@@ -97,4 +97,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+if vim.g.neovide then
+  -- Put anything you want to happen only in Neovide here
+  vim.g.neovide_transparency = 0.95
+  vim.g.neovide_theme = 'auto'
+  vim.g.neovide_cursor_vfx_mode = 'railgun'
+end
 -- vim: ts=2 sts=2 sw=2 et
