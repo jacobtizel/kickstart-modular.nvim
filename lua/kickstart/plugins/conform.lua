@@ -20,19 +20,30 @@ return {
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
-        local lsp_format_opt
         if disable_filetypes[vim.bo[bufnr].filetype] then
-          lsp_format_opt = 'never'
+          return nil
         else
-          lsp_format_opt = 'fallback'
+          return {
+            timeout_ms = 500,
+            lsp_format = 'fallback',
+          }
         end
-        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-          return
-        end
-        return {
-          timeout_ms = 500,
-          lsp_format = lsp_format_opt,
-        }
+        -- Commenting out b/c not sure what it does
+        -- <<<<<<< HEAD
+        --         if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+        --           return
+        --         end
+        --         return {
+        --           timeout_ms = 500,
+        --           lsp_format = lsp_format_opt,
+        --         }
+        -- ||||||| 891bdd8
+        --         return {
+        --           timeout_ms = 500,
+        --           lsp_format = lsp_format_opt,
+        --         }
+        -- =======
+        -- >>>>>>> dam-9000-upstream/master
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
